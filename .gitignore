@@ -1,0 +1,35 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+*.ap_
+*.hprof
+*.keystore
+*.jks
+
+# Android build outputs (all modules)
+**/build/
+**/.cxx/
+.kotlin/
+**/.kotlin/
+
+# Rust build outputs
+rust/target/
+rust/**/target/
+
+# Generated native libraries
+app/src/main/jniLibs/
+
+# Local machine files
+*.log
+*.tmp
+
+!gradle/wrapper/gradle-wrapper.jar
+!/gradle/wrapper/gradle-wrapper.properties

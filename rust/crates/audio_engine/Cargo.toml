@@ -1,0 +1,16 @@
+[package]
+name = "audio_engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+shared_types.workspace = true
+thiserror.workspace = true
+ringbuf.workspace = true
+log.workspace = true
+crossbeam-channel.workspace = true
+
+[target.'cfg(target_os = "android")'.dependencies]
+ndk = { version = "0.9.0", features = ["audio", "api-level-30"] }

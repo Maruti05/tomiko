@@ -1,0 +1,11 @@
+[package]
+name = "android_bridge"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+shared_types.workspace = true
+crossbeam-channel.workspace = true
+audio_engine.workspace = true

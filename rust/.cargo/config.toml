@@ -1,0 +1,4 @@
+[target.aarch64-linux-android]
+# Android 15+ supports 16 KB memory pages. This must be applied to every
+# native shared library, including the Bevy cdylib.
+rustflags = ["-C", "link-arg=-Wl,-z,max-page-size=16384"]

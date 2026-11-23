@@ -1,0 +1,32 @@
+{
+  "characters": [
+    {
+      "id": "tomiko",
+      "name": "Tomiko",
+      "thumbnail": "characters/tomiko/thumbnail.png",
+      "modelPath": "characters/tomiko/character.glb",
+      "configPath": "characters/tomiko/metadata.json"
+    },
+    {
+      "id": "trex",
+      "name": "T-Rex",
+      "thumbnail": "",
+      "modelPath": "characters/trex/model.glb",
+      "configPath": ""
+    },
+    {
+      "id": "dino",
+      "name": "Dino",
+      "thumbnail": "",
+      "modelPath": "characters/dino/model.glb",
+      "configPath": ""
+    },
+    {
+      "id": "cat",
+      "name": "Cat",
+      "thumbnail": "",
+      "modelPath": "characters/cat/model.glb",
+      "configPath": ""
+    }
+  ]
+}

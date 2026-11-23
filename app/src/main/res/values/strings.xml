@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tomiko</string>
+
+    <!-- Home -->
+    <string name="pick_your_friend">Pick your friend!</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_info">About</string>
+
+    <!-- Talk Screen -->
+    <string name="btn_start_recording">Tap to talk</string>
+    <string name="btn_stop_recording">Stop recording</string>
+    <string name="btn_replay">Listen again</string>
+    <string name="btn_repeat">New recording</string>
+    <string name="btn_back">Go back</string>
+    <string name="status_listening">I\'m listening…</string>
+    <string name="status_processing">Processing…</string>
+    <string name="status_playing">Listen to me!</string>
+    <string name="status_tap_to_talk">Tap to talk!</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="parental_gate_title">Solve to continue</string>
+    <string name="parental_gate_instruction">What is %1$d + %2$d?</string>
+    <string name="parental_gate_submit">Submit</string>
+    <string name="parental_gate_error">Try again!</string>
+    <string name="volume_label">Volume</string>
+    <string name="reset_character">Reset Character</string>
+    <string name="reset_confirm">This will reset your character position. Continue?</string>
+    <string name="version_label">Version %s</string>
+    <string name="clear_data">Clear All Data</string>
+
+    <!-- Errors -->
+    <string name="error_permission">Please allow microphone access so Tomiko can hear you!</string>
+    <string name="error_generic">Oops! Something went wrong. Try again.</string>
+    <string name="error_no_character">No characters found</string>
+
+    <!-- Effects -->
+    <string name="effect_normal">Normal</string>
+    <string name="effect_chipmunk">Chipmunk</string>
+    <string name="effect_deep">Deep</string>
+    <string name="effect_robot">Robot</string>
+    <string name="effect_echo">Echo</string>
+    <string name="effect_alien">Alien</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_character">Character display</string>
+    <string name="cd_tomiko_logo">Tomiko logo</string>
+    <string name="cd_waveform">Audio waveform</string>
+</resources>

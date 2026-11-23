@@ -1,0 +1,56 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/shared_types",
+    "crates/character_engine",
+    "crates/audio_engine",
+    "crates/android_bridge",
+    "crates/bevy_app",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.97.1"
+
+[workspace.dependencies]
+shared_types = { path = "crates/shared_types" }
+android_bridge = { path = "crates/android_bridge" }
+audio_engine = { path = "crates/audio_engine" }
+bevy = { version = "0.20.1", default-features = false, features = [
+    "3d",
+    "ui",
+    "bevy_winit",
+    "android-game-activity",
+    "multi_threaded",
+    "std",
+    "default_font",
+] }
+jni = "0.22.4"
+crossbeam-channel = "0.5.17"
+thiserror = "2.0.21"
+ringbuf = "0.6.0"
+log = "0.4.28"
+
+# wgpu-hal 30.0.2 panics (`unreachable!()`) when Mali drivers return
+# VK_ERROR_FRAGMENTED_POOL from vkAllocateDescriptorSets. The vendored copy
+# carries the upstream fix from https://github.com/gfx-rs/wgpu/pull/10264
+# (commit 573944a9712a91601c8ed508e615b23cd84a7489). Drop this patch once a
+# released wgpu-hal includes it.
+[patch.crates-io]
+wgpu-hal = { path = "vendor/wgpu-hal" }
+
+# Bevy 0.20.1 uses storage-buffer skinning on Android; Adreno drivers corrupt
+# matrix reads, making skinned characters invisible. The vendored copy forces
+# the uniform-buffer skinning and image morph-target paths on Android.
+# Drop this patch once https://github.com/bevyengine/bevy/issues/24926 is fixed
+# in a released Bevy version.
+bevy_render = { path = "vendor/bevy_render" }
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+opt-level = 3
+panic = "abort"
+strip = "symbols"
